@@ -1,8 +1,21 @@
 <?php 
-$paragrafo = $_GET["paragrafo"];
-$parolaDaCensurare = $_GET["parolaccia"];
-$placeholderCensura = "***";
-$paragrafoCensurato = str_ireplace($parolaDaCensurare, $placeholderCensura, $paragrafo);
+    $paragrafoDefault = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus hic vel eum architecto officia placeat. Aut veniam consectetur repellendus expedita. Illo aliquid consectetur cum reiciendis, consequuntur quam architecto impedit alias!";
+
+    // if( isset($_GET["paragrafo"]) ) {
+    //     $paragrafo = $_GET["paragrafo"];
+    // } else {
+    //     $paragrafo = $paragrafoDefault;
+    // }
+
+    // $variabile = (condizione) ? valoreSeVero : valoreSeFalso;
+    // $paragrafo = (isset($_GET["paragrafo"])) ? $_GET["paragrafo"] : $paragrafoDefault;
+
+    // $variabile = valoreSeEsistente ?? valoreDiDefault;
+    $paragrafo = $_GET["paragrafo"] ?? $null;
+
+    $parolaDaCensurare = $_GET["parolaccia"];
+    $placeholderCensura = "***";
+    $paragrafoCensurato = str_ireplace($parolaDaCensurare, $placeholderCensura, $paragrafo);
 ?>
 <!DOCTYPE html>
 <html lang="en">
